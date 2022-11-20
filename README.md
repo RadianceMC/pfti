@@ -9,7 +9,9 @@ Discover them all to see what the mod offers and try to have fun!
 
 ## What does it offer?
 
-It adds different kinds of mob based pets (), work bench pets and other random things. If you have suggestions please make them! As I would love to add more pets and make this mod more alive than ever!
+It adds different kinds of mob based pets, workbench pets and other random things. If you have suggestions please make them! As I would love to add more pets and make this mod more alive than ever!
+
+I will work on add mod compatibility later with some cute and useful mobs/workbenches if people desire so!
 
 ## Is this a fork of Inventory Pets?
 
