@@ -1,0 +1,24 @@
+[versions]
+# check these on https://modmuss50.me/fabric.html
+minecraft="1.18.2"
+yarn_mappings="1.18.2+build.4"
+fabric_loader="0.14.10"
+
+fabric_api="0.66.0+1.18.2"
+
+# third party dependencies
+modmenu="3.2.3" # check https://www.curseforge.com/minecraft/mc-mods/modmenu/files/all?filter-game-version=1738749986%3a73250
+
+[libraries]
+minecraft = { module = "com.minecraft:minecraft", version.ref = "minecraft" }
+yarn_mappings = { module = "net.fabricmc:yarn", version.ref = "yarn_mappings" }
+fabric_loader = { module = "net.fabricmc:fabric-loader", version.ref = "fabric_loader" }
+
+fabric_api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fabric_api" }
+
+# third party dependencies
+modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
+
+[plugins]
+fabric_loom = { id = "fabric-loom", version = "1.0-SNAPSHOT" }
+quiltflower = { id = "io.github.juuxel.loom-quiltflower", version = "1.7.4" }

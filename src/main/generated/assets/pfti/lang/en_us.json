@@ -1,0 +1,22 @@
+{
+  "item.pfti.cat_pet": "Cat Pet",
+  "item.pfti.mining_pet": "Mining Pet",
+  "item.pfti.mining_pet_2": "Mining Pet",
+  "item.pfti.mining_pet_3": "Mining Pet",
+  "item.pfti.mining_pet_4": "Mining Pet",
+  "item.pfti.mining_pet_5": "Mining Pet",
+  "item.pfti.pet_soul": "Pet Soul",
+  "item.pfti.sugar_cane_pet": "Sugar Cane Pet",
+  "item.pfti.sugar_cane_pet_2": "Sugar Cane Pet",
+  "item.pfti.sugar_cane_pet_3": "Sugar Cane Pet",
+  "item.pfti.sugar_cane_pet_4": "Sugar Cane Pet",
+  "item.pfti.sugar_cane_pet_5": "Sugar Cane Pet",
+  "item.pfti.tater_pet": "Tater Pet",
+  "itemGroup.pfti.group": "Pets From The Inventory",
+  "taterpetitem.info": "This is the \u0027best\u0027 pet out there",
+  "tooltip.petitem.enchantment": "Gives: %1$s",
+  "tooltip.petitem.shift": "Press \u003cshift\u003e to see the tooltips",
+  "tooltip.petitem.tier": "Current tier: %1$s",
+  "tooltip.petitem.tier_max": "Current tier: %1$s (max)",
+  "tooltip.sugarcanepetitem.info": "Gotta go fast!"
+}
