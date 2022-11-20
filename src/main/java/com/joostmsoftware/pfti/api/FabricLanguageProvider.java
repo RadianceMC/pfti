@@ -42,7 +42,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.TreeMap;
 
-// Modified it to make it work on 1.18.2
+// Modified by JoostMSoftware it to make it work on 1.18.2
 public abstract class FabricLanguageProvider implements DataProvider {
     private static final Gson GSON = (new GsonBuilder()).setPrettyPrinting().create();
     protected final FabricDataGenerator dataGenerator;
