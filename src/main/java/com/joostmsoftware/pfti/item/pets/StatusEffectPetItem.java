@@ -1,11 +1,9 @@
 package com.joostmsoftware.pfti.item.pets;
 
+import com.joostmsoftware.pfti.config.PftiConfig;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
-import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
@@ -22,7 +20,7 @@ public class StatusEffectPetItem extends PetItem {
     public StatusEffectPetItem(StatusEffect effect, int petTier, Settings settings) {
         super(petTier, settings);
         statusEffect = effect;
-        effectDuration = 5;
+        effectDuration = PftiConfig.DURATION_OF_STATUSEFFECT;
     }
 
     @Override
@@ -55,40 +53,5 @@ public class StatusEffectPetItem extends PetItem {
             tooltip.add(new TranslatableText("tooltip.petitem.shift").formatted(Formatting.GRAY));
         }
         super.appendTooltip(stack, world, tooltip, context);
-    }
-
-    @Override
-    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
-        if (!world.isClient) {
-            if (entity instanceof PlayerEntity player) {
-                if (hasPetInInventory(player, slot)) {
-                    if (currentTier == 1) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 0, true, false, true));
-                    } else if (currentTier == 2) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 1, true, false, true));
-                    } else if (currentTier == 3) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 2, true, false, true));
-                    } else if (currentTier == 4) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 3, true, false, true));
-                    } else if (currentTier == 5){
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 4, true, false, true));
-                    }
-                }
-                if (player.getOffHandStack() == stack) {
-                    if (currentTier == 1) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 0, true, false, true));
-                    } else if (currentTier == 2) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 1, true, false, true));
-                    } else if (currentTier == 3) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 2, true, false, true));
-                    } else if (currentTier == 4) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 3, true, false, true));
-                    } else if (currentTier == 5){
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 4, true, false, true));
-                    }
-                }
-            }
-        }
-        super.inventoryTick(stack, world, entity, slot, selected);
     }
 }

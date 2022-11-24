@@ -20,8 +20,19 @@ public class PftiItems {
     public static final StatusEffectPetItem SUGAR_CANE_PET3 = new SugarCanePetItem(StatusEffects.SPEED, 3, new Item.Settings().group(Pfti.GROUP).maxCount(1));
     public static final StatusEffectPetItem SUGAR_CANE_PET4 = new SugarCanePetItem(StatusEffects.SPEED, 4, new Item.Settings().group(Pfti.GROUP).maxCount(1));
     public static final StatusEffectPetItem SUGAR_CANE_PET5 = new SugarCanePetItem(StatusEffects.SPEED, 5, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final PetItem TATER_PET = new TaterPetItem(1, new Item.Settings().group(Pfti.GROUP).maxCount(1));
+    public static final StatusEffectPetItem IRON_GOLEM = new IronGolemPetItem(StatusEffects.RESISTANCE,1, new Item.Settings().group(Pfti.GROUP).maxCount(1));
+    public static final StatusEffectPetItem IRON_GOLEM2 = new IronGolemPetItem(StatusEffects.RESISTANCE,2, new Item.Settings().group(Pfti.GROUP).maxCount(1));
+    public static final StatusEffectPetItem IRON_GOLEM3 = new IronGolemPetItem(StatusEffects.RESISTANCE,3, new Item.Settings().group(Pfti.GROUP).maxCount(1));
+    public static final StatusEffectPetItem IRON_GOLEM4 = new IronGolemPetItem(StatusEffects.RESISTANCE,4, new Item.Settings().group(Pfti.GROUP).maxCount(1));
+    public static final StatusEffectPetItem IRON_GOLEM5 = new IronGolemPetItem(StatusEffects.RESISTANCE,5, new Item.Settings().group(Pfti.GROUP).maxCount(1));
     public static final StatusEffectPetItem CAT_PET = new CatPetItem(StatusEffects.NIGHT_VISION, 1, new Item.Settings().group(Pfti.GROUP).maxCount(1));
+    public static final StatusEffectPetItem DOLPHIN_PET = new DolphinPetItem(StatusEffects.DOLPHINS_GRACE,1, new Item.Settings().group(Pfti.GROUP).maxCount(1));
+
+    public static final PetItem TATER_PET = new TaterPetItem(1, new Item.Settings().group(Pfti.GROUP).maxCount(1));
+    public static final PetItem CACTUS_PET = new CactusPetItem(1, new Item.Settings().group(Pfti.GROUP).maxCount(1));
+    public static final PetItem SQUID_PET = new SquidPetItem(1, new Item.Settings().group(Pfti.GROUP).maxCount(1));
+
+
     public static final Item PET_SOUL = new Item(new Item.Settings().group(Pfti.GROUP));
 
     static {
@@ -37,6 +48,14 @@ public class PftiItems {
         PETS.put("sugar_cane_pet_3", SUGAR_CANE_PET3);
         PETS.put("sugar_cane_pet_4", SUGAR_CANE_PET4);
         PETS.put("sugar_cane_pet_5", SUGAR_CANE_PET5);
+        PETS.put("iron_golem", IRON_GOLEM);
+        PETS.put("iron_golem_2", IRON_GOLEM2);
+        PETS.put("iron_golem_3", IRON_GOLEM3);
+        PETS.put("iron_golem_4", IRON_GOLEM4);
+        PETS.put("iron_golem_5", IRON_GOLEM5);
         PETS.put("tater_pet", TATER_PET);
+        PETS.put("cactus_pet", CACTUS_PET);
+        PETS.put("dolphin_pet", DOLPHIN_PET);
+        PETS.put("squid_pet", SQUID_PET);
     }
 }

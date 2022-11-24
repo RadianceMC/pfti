@@ -8,11 +8,10 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class CatPetItem extends StatusEffectPetItem {
-    public CatPetItem(StatusEffect effect, int petTier, Settings settings) {
+public class IronGolemPetItem extends StatusEffectPetItem {
+    public IronGolemPetItem(StatusEffect effect, int petTier, Settings settings) {
         super(effect, petTier, settings);
-        statusEffect = effect;
-        maxTier = setMaxTier(1);
+        setMaxTier(5);
     }
 
     @Override

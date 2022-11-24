@@ -18,6 +18,11 @@ repositories {
         name = 'TerraformersMC'
         url = 'https://maven.terraformersmc.com'
     }
+
+    maven {
+        name = 'Repsy.io'
+        url = 'https://repsy.io/mvn/joostmsoftware/joostmsoftware'
+    }
 }
 
 dependencies {
@@ -29,6 +34,7 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation libs.fabric.api
     modImplementation libs.modmenu
+    modImplementation libs.jxlib
 }
 
 loom {
