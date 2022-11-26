@@ -5,7 +5,6 @@ quilt_flower = "1.7.4"
 
 # game dependencies https://modmuss50.me/fabric.html and for quilt mappings check: https://github.com/QuiltMC/quilt-mappings/tags
 minecraft="1.18.2"
-quilt_mappings = "1.18.2+build.26"
 fabric_loader="0.14.10"
 fabric_api="0.67.0+1.18.2"
 
