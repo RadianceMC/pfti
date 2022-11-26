@@ -2,7 +2,6 @@ plugins {
     id 'maven-publish'
     alias libs.plugins.fabric.loom
     alias libs.plugins.quiltflower
-    alias libs.plugins.quilt.mappings.on.loom
 }
 
 version = project.mod_version
@@ -24,12 +23,16 @@ repositories {
         name = 'Repsy.io'
         url = 'https://repsy.io/mvn/joostmsoftware/joostmsoftware'
     }
+
+    maven { url = "https://maven.quiltmc.org/repository/release" }
 }
 
 dependencies {
     // To change the versions see the gradle/libs.versions.toml file
     minecraft libs.minecraft
-    mappings variantOf(libs.quilt.mappings) { classifier 'intermediary-v2' }
+    mappings(loom.layered {
+        it.mappings("org.quiltmc:quilt-mappings:1.18.2+build.26:intermediary-v2")
+    })
     modImplementation libs.fabric.loader
 
     // Mod dependencies

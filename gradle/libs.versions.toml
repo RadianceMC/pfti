@@ -2,7 +2,6 @@
 # plugins
 fabric_loom = "1.0-SNAPSHOT"
 quilt_flower = "1.7.4"
-quilt_mappings_on_loom = "4.2.1"
 
 # game dependencies https://modmuss50.me/fabric.html and for quilt mappings check: https://github.com/QuiltMC/quilt-mappings/tags
 minecraft="1.18.2"
@@ -28,4 +27,3 @@ jxlib = { module = "com.joostmsoftware:JXLib", version.ref = "jxlib" }
 [plugins]
 fabric_loom = { id = "fabric-loom", version.ref = "fabric_loom" }
 quiltflower = { id = "io.github.juuxel.loom-quiltflower", version.ref = "quilt_flower" }
-quilt_mappings_on_loom = { id = "org.quiltmc.quilt-mappings-on-loom", version.ref = "quilt_mappings_on_loom" }
