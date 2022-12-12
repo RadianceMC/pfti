@@ -11,6 +11,7 @@ fabric_api="0.67.0+1.18.2"
 # third party dependencies
 modmenu="3.2.3" # check https://www.curseforge.com/minecraft/mc-mods/modmenu/files/all?filter-game-version=1738749986%3a73250
 jxlib="0.1.5.2+1.18.2"
+cloth_config = "6.4.90"
 
 [libraries]
 minecraft = { module = "com.minecraft:minecraft", version.ref = "minecraft" }
@@ -22,6 +23,7 @@ fabric_api = { module = "net.fabricmc.fabric-api:fabric-api", version.ref = "fab
 # third party dependencies
 modmenu = { module = "com.terraformersmc:modmenu", version.ref = "modmenu" }
 jxlib = { module = "com.joostmsoftware:JXLib", version.ref = "jxlib" }
+cloth_config = {module = "me.shedaniel.cloth:cloth-config-fabric", version.ref = "cloth_config"}
 
 [plugins]
 fabric_loom = { id = "fabric-loom", version.ref = "fabric_loom" }

@@ -25,6 +25,8 @@ repositories {
     }
 
     maven { url = "https://maven.quiltmc.org/repository/release" }
+    maven { url "https://maven.shedaniel.me/" }
+    maven { url "https://maven.terraformersmc.com/releases/" }
 }
 
 dependencies {
@@ -37,8 +39,12 @@ dependencies {
 
     // Mod dependencies
     modImplementation libs.fabric.api
-    modImplementation libs.modmenu
     modImplementation libs.jxlib
+    modApi libs.modmenu
+
+    modApi(libs.cloth.config) {
+        exclude(group: "net.fabricmc.fabric-api")
+    }
 }
 
 loom {
