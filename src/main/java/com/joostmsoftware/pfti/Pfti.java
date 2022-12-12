@@ -3,7 +3,7 @@ package com.joostmsoftware.pfti;
 import com.joostmsoftware.pfti.common.registry.ItemRegistry;
 import com.joostmsoftware.pfti.config.PftiConfig;
 import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
+import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -33,7 +33,7 @@ public class Pfti implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        AutoConfig.register(PftiConfig.class, Toml4jConfigSerializer::new);
+        AutoConfig.register(PftiConfig.class, JanksonConfigSerializer::new);
 
         ItemRegistry.registerItems();
 

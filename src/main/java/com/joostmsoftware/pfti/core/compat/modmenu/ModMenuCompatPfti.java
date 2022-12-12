@@ -1,4 +1,4 @@
-package com.joostmsoftware.pfti.core.compatibility.modmenu;
+package com.joostmsoftware.pfti.core.compat.modmenu;
 
 import com.joostmsoftware.pfti.config.PftiConfig;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
