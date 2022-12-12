@@ -4,5 +4,7 @@
   "tooltip.petitem.tier": "Current tier: %1$s",
   "tooltip.petitem.tier_max": "Current tier: %1$s (max)",
   "tooltip.petitem.enchantment": "Gives: %1$s",
-  "tooltip.sugarcanepetitem.info": "Gotta go fast!"
+  "tooltip.sugarcanepetitem.info": "Gotta go fast!",
+  "text.autoconfig.pfti.title": "Pets from the Inventory",
+  "text.autoconfig.pfti.option.effectDuration": "StatusEffect Duration (in ticks)"
 }
