@@ -1,6 +1,6 @@
-package com.joostmsoftware.pfti.item.pets.PetItems;
+package com.joostmsoftware.pfti.common.item.pets.PetItems;
 
-import com.joostmsoftware.pfti.item.pets.PetItem;
+import com.joostmsoftware.pfti.common.item.pets.PetItem;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;

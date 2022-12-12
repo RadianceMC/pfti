@@ -1,4 +1,4 @@
-package com.joostmsoftware.pfti.item.pets;
+package com.joostmsoftware.pfti.common.item.pets;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;

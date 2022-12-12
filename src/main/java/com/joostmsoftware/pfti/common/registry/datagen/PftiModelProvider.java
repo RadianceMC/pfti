@@ -1,8 +1,10 @@
-package com.joostmsoftware.pfti.registry.datagen;
+package com.joostmsoftware.pfti.common.registry.datagen;
 
-import com.joostmsoftware.pfti.item.PftiItems;
+import com.joostmsoftware.pfti.common.block.PftiBlocks;
+import com.joostmsoftware.pfti.common.item.PftiItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+import net.minecraft.block.Blocks;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.model.BlockStateModelGenerator;
 import net.minecraft.data.client.model.Models;
@@ -15,7 +17,7 @@ public class PftiModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-
+        blockStateModelGenerator.registerStateWithModelReference(PftiBlocks.PET_SUMMONING_ALTAR, Blocks.LECTERN);
     }
 
 

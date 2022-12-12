@@ -1,8 +1,8 @@
-package com.joostmsoftware.pfti.item;
+package com.joostmsoftware.pfti.common.item;
 
 import com.joostmsoftware.pfti.Pfti;
-import com.joostmsoftware.pfti.item.pets.*;
-import com.joostmsoftware.pfti.item.pets.PetItems.*;
+import com.joostmsoftware.pfti.common.item.pets.*;
+import com.joostmsoftware.pfti.common.item.pets.PetItems.*;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import java.util.HashMap;

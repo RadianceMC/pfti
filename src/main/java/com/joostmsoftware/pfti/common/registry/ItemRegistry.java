@@ -1,10 +1,10 @@
-package com.joostmsoftware.pfti.registry;
+package com.joostmsoftware.pfti.common.registry;
 
 import com.joostmsoftware.pfti.Pfti;
 import net.minecraft.item.Item;
 import net.minecraft.util.registry.Registry;
 
-import static com.joostmsoftware.pfti.item.PftiItems.PETS;
+import static com.joostmsoftware.pfti.common.item.PftiItems.PETS;
 
 public class ItemRegistry {
     public static void registerItems() {

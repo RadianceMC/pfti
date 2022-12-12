@@ -1,7 +1,9 @@
 package com.joostmsoftware.pfti;
 
+import com.joostmsoftware.pfti.common.registry.ItemRegistry;
 import com.joostmsoftware.pfti.config.PftiConfig;
-import com.joostmsoftware.pfti.registry.ItemRegistry;
+import me.shedaniel.autoconfig.AutoConfig;
+import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.minecraft.item.ItemGroup;
@@ -18,6 +20,11 @@ public class Pfti implements ModInitializer {
     private static final String MOD_ID = "pfti";
     public static final String NAMESPACE = "PetsFromTheInventory";
 
+    /**
+     * Commonly used to link the identifier with the modid, and it's path.
+     * @param path the path of where you want to store it.
+     * @return a new Identifier with the provided modid and specified path.
+     */
     public static Identifier ID(String path) {
         return new Identifier(MOD_ID, path);
     }
@@ -26,7 +33,7 @@ public class Pfti implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        PftiConfig.loadConfig();
+        AutoConfig.register(PftiConfig.class, Toml4jConfigSerializer::new);
 
         ItemRegistry.registerItems();
 

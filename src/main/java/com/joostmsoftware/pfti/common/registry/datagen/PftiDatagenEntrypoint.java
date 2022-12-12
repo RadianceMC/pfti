@@ -1,4 +1,4 @@
-package com.joostmsoftware.pfti.registry.datagen;
+package com.joostmsoftware.pfti.common.registry.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;

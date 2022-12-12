@@ -1,8 +1,8 @@
-package com.joostmsoftware.pfti.registry.datagen;
+package com.joostmsoftware.pfti.common.registry.datagen;
 
 import com.joostmsoftware.jxlib.data.FabricLanguageProvider;
 import com.joostmsoftware.pfti.Pfti;
-import com.joostmsoftware.pfti.item.PftiItems;
+import com.joostmsoftware.pfti.common.item.PftiItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
 import java.io.IOException;

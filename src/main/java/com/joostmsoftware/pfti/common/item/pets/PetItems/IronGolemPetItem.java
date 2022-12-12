@@ -1,6 +1,6 @@
-package com.joostmsoftware.pfti.item.pets.PetItems;
+package com.joostmsoftware.pfti.common.item.pets.PetItems;
 
-import com.joostmsoftware.pfti.item.pets.StatusEffectPetItem;
+import com.joostmsoftware.pfti.common.item.pets.StatusEffectPetItem;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectInstance;
@@ -8,12 +8,10 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class MiningPetItem extends StatusEffectPetItem {
-
-    public MiningPetItem(StatusEffect effect, int petTier, Settings settings) {
+public class IronGolemPetItem extends StatusEffectPetItem {
+    public IronGolemPetItem(StatusEffect effect, int petTier, Settings settings) {
         super(effect, petTier, settings);
-        statusEffect = effect;
-        maxTier = setMaxTier(5);
+        setMaxTier(5);
     }
 
     @Override
