@@ -6,4 +6,8 @@ import net.minecraft.block.entity.BlockEntityType;
 
 public class PftiBlockEntities {
     public static final BlockEntityType<PetSummoningAltarBlockEntity> PET_SUMMONING_ALTAR = BlockRegistry.registerAltarBlockEntity("pet_summoning_type", PftiBlocks.PET_SUMMONING_ALTAR);
+
+    public static void loadBlockEntitiesInRegistry() {
+
+    }
 }

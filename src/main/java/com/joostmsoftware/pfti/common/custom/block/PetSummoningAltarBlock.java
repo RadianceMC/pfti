@@ -2,6 +2,7 @@ package com.joostmsoftware.pfti.common.custom.block;
 
 import com.joostmsoftware.pfti.common.block.PftiBlockEntities;
 import com.joostmsoftware.pfti.common.custom.blockEntities.PetSummoningAltarBlockEntity;
+import com.joostmsoftware.pfti.common.stat.PftiStats;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockEntityProvider;
 import net.minecraft.block.BlockRenderType;
@@ -11,16 +12,25 @@ import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
+import net.minecraft.screen.CraftingScreenHandler;
+import net.minecraft.screen.NamedScreenHandlerFactory;
+import net.minecraft.screen.ScreenHandlerContext;
+import net.minecraft.screen.SimpleNamedScreenHandlerFactory;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
+import net.minecraft.util.ItemScatterer;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
-import static net.minecraft.block.AbstractFurnaceBlock.checkType;
+import static net.minecraft.block.BlockWithEntity.checkType;
 
 public class PetSummoningAltarBlock extends Block implements BlockEntityProvider {
+    private static final Text TITLE = new TranslatableText("container.altar");
+
     public PetSummoningAltarBlock(Settings settings) {
         super(settings);
     }
@@ -44,9 +54,17 @@ public class PetSummoningAltarBlock extends Block implements BlockEntityProvider
 
     @Override
     public ActionResult onUse(BlockState blockState, World world, BlockPos blockPos, PlayerEntity player, Hand hand, BlockHitResult blockHitResult) {
-        if (world.isClient) return ActionResult.SUCCESS;
-        Inventory blockEntity = (Inventory) world.getBlockEntity(blockPos);
+        if (!world.isClient) {
+            NamedScreenHandlerFactory screenHandlerFactory = blockState.createScreenHandlerFactory(world, blockPos);
 
+            if (screenHandlerFactory != null) {
+                player.openHandledScreen(screenHandlerFactory);
+                player.increaseStat(PftiStats.INTERACT_WITH_PET_ALTAR, 1);
+                return ActionResult.CONSUME;
+            }
+        }
+
+        Inventory blockEntity = (Inventory) world.getBlockEntity(blockPos);
 
         if (!player.getStackInHand(hand).isEmpty()) {
             // Check what is the first open slot and put an item from the player's hand there
@@ -59,7 +77,7 @@ public class PetSummoningAltarBlock extends Block implements BlockEntityProvider
                 blockEntity.setStack(1, player.getStackInHand(hand).copy());
                 player.getStackInHand(hand).setCount(0);
             } else {
-                // If the inventory is full we'll print it's contents
+                // If the inventory is full we'll print its contents
                 System.out.println("The first slot holds "
                         + blockEntity.getStack(0) + " and the second slot holds " + blockEntity.getStack(1));
             }
@@ -78,5 +96,24 @@ public class PetSummoningAltarBlock extends Block implements BlockEntityProvider
             }
         }
         return ActionResult.SUCCESS;
+    }
+
+    @Override
+    public void onStateReplaced(BlockState state, World world, BlockPos pos, BlockState newState, boolean moved) {
+        if (state.getBlock() != newState.getBlock()) {
+            BlockEntity blockEntity = world.getBlockEntity(pos);
+            if (blockEntity instanceof PetSummoningAltarBlockEntity) {
+                ItemScatterer.spawn(world, pos, (PetSummoningAltarBlockEntity)blockEntity);
+                // update comparators
+                world.updateComparators(pos,this);
+            }
+            super.onStateReplaced(state, world, pos, newState, moved);
+        }
+    }
+
+    @Nullable
+    @Override
+    public NamedScreenHandlerFactory createScreenHandlerFactory(BlockState state, World world, BlockPos pos) {
+        return new SimpleNamedScreenHandlerFactory((i, playerInventory, playerEntity) -> new CraftingScreenHandler(i, playerInventory, ScreenHandlerContext.create(world, pos)), TITLE);
     }
 }
