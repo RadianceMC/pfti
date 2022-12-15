@@ -1,5 +1,6 @@
 package com.joostmsoftware.pfti;
 
+import com.joostmsoftware.pfti.common.registry.BlockRegistry;
 import com.joostmsoftware.pfti.common.registry.ItemRegistry;
 import com.joostmsoftware.pfti.config.PftiConfig;
 import me.shedaniel.autoconfig.AutoConfig;
@@ -36,6 +37,7 @@ public class Pfti implements ModInitializer {
         AutoConfig.register(PftiConfig.class, JanksonConfigSerializer::new);
 
         ItemRegistry.registerItems();
+        BlockRegistry.registerBlocks();
 
         LOGGER.info("Loaded al registries from: Pets from the Inventory");
     }
