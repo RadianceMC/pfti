@@ -37,12 +37,7 @@ public class Pfti implements ModInitializer {
     public void onInitialize() {
         AutoConfig.register(PftiConfig.class, JanksonConfigSerializer::new);
 
-
         ItemRegistry.registerItems();
-        BlockRegistry.registerBlocks();
-        EntityRegistry.registerEntities();
-        ScreenRegistry.registerScreens();
-        StatRegistry.registerStats();
 
         LOGGER.info("Loaded al registries from: Pets from the Inventory");
     }
