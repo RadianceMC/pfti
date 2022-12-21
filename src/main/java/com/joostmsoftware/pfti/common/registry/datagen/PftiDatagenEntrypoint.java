@@ -8,5 +8,6 @@ public class PftiDatagenEntrypoint implements DataGeneratorEntrypoint {
     public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
         fabricDataGenerator.addProvider(PftiModelProvider::new);
         fabricDataGenerator.addProvider(PftiLanguageProvider::new);
+        fabricDataGenerator.addProvider(PftiItemTagProvider::new);
     }
 }

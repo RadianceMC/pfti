@@ -3,6 +3,7 @@ package com.joostmsoftware.pfti.common.registry.datagen;
 import com.joostmsoftware.jxlib.data.FabricLanguageProvider;
 import com.joostmsoftware.pfti.Pfti;
 import com.joostmsoftware.pfti.common.item.PftiItems;
+import com.joostmsoftware.pfti.common.registry.TagRegistry;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
 import java.io.IOException;
@@ -29,6 +30,10 @@ public class PftiLanguageProvider extends FabricLanguageProvider {
         } catch (IOException e) {
             throw new RuntimeException("Failed to add existing language file!", e);
         }
+
+        translationBuilder.add(TagRegistry.PETS, "Pets");
+        translationBuilder.add(TagRegistry.MINING_PETS, "Mining Pet");
+        translationBuilder.add(TagRegistry.IRON_GOLEM_PETS, "Iron Golem Pet");
     }
 
     // https://stackoverflow.com/questions/1892765/how-to-capitalize-the-first-character-of-each-word-in-a-string

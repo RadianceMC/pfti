@@ -39,6 +39,8 @@ public class Pfti implements ModInitializer {
 
         ItemRegistry.registerItems();
 
+        LootTableRegistry.loadModifiedLootTables();
+
         LOGGER.info("Loaded al registries from: Pets from the Inventory");
     }
 }

@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "pfti:mining_pet",
+    "pfti:mining_pet_2",
+    "pfti:mining_pet_3",
+    "pfti:mining_pet_4",
+    "pfti:mining_pet_5"
+  ]
+}

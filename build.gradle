@@ -15,6 +15,10 @@ repositories {
     // for more information about repositories.
 
     maven {
+        url "https://cursemaven.com"
+    }
+
+    maven {
         name 'TerraformersMC'
         url 'https://maven.terraformersmc.com'
     }
@@ -27,6 +31,7 @@ repositories {
     maven { url "https://maven.quiltmc.org/repository/release" }
     maven { url "https://maven.shedaniel.me/" }
     maven { url "https://maven.terraformersmc.com/releases/" }
+
 }
 
 dependencies {
@@ -45,6 +50,11 @@ dependencies {
     modApi(libs.cloth.config) {
         exclude(group: "net.fabricmc.fabric-api")
     }
+
+    // Emi + Emi Loot
+    modImplementation libs.emi
+    modImplementation libs.emi.loot
+//    modRuntimeOnly libs.emi.loot
 }
 
 loom {

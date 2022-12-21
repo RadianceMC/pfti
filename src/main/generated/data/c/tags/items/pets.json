@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "pfti:dolphin_pet",
+    "pfti:cat_pet",
+    "pfti:cactus_pet",
+    "pfti:squid_pet",
+    "pfti:tater_pet",
+    "#c:pets/iron_golem_pets",
+    "#c:pets/mining_pets",
+    "#c:pets/sugar_cane_pets"
+  ]
+}
