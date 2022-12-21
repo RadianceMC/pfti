@@ -1,6 +1,7 @@
 package com.joostmsoftware.pfti.common.item.pets.PetItems;
 
 import com.joostmsoftware.pfti.common.item.pets.PetItem;
+import com.joostmsoftware.pfti.core.api.pet.PetTypes;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
@@ -14,8 +15,8 @@ import java.util.List;
 public class TaterPetItem extends PetItem {
 
 
-    public TaterPetItem(int petTier, Settings settings) {
-        super(petTier, settings);
+    public TaterPetItem(int petTier, PetTypes type, Settings settings) {
+        super(petTier, type, settings);
     }
 
     @Override

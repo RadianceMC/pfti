@@ -24,6 +24,7 @@
   "taterpetitem.info": "This is the \u0027best\u0027 pet out there",
   "text.autoconfig.pfti.option.effectDuration": "StatusEffect Duration (in ticks)",
   "text.autoconfig.pfti.title": "Pets from the Inventory",
+  "tooltip.catpetitem.info": "Meow!",
   "tooltip.petitem.enchantment": "Gives: %1$s",
   "tooltip.petitem.shift": "Press \u003cshift\u003e to see the tooltips",
   "tooltip.petitem.tier": "Current tier: %1$s",

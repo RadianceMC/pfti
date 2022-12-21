@@ -17,7 +17,7 @@ public class Pfti implements ModInitializer {
 
     public static final Logger LOGGER = LoggerFactory.getLogger("Pfti");
 
-    private static final String MOD_ID = "pfti";
+    public static final String MOD_ID = "pfti";
     public static final String NAMESPACE = "PetsFromTheInventory";
 
     /**
@@ -31,9 +31,12 @@ public class Pfti implements ModInitializer {
 
     public static final ItemGroup GROUP = FabricItemGroupBuilder.build(ID("group"), ()-> new ItemStack(Items.SPAWNER));
 
+
+
     @Override
     public void onInitialize() {
         AutoConfig.register(PftiConfig.class, JanksonConfigSerializer::new);
+
 
         ItemRegistry.registerItems();
         BlockRegistry.registerBlocks();

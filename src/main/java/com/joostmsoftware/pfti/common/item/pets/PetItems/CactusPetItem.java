@@ -1,6 +1,7 @@
 package com.joostmsoftware.pfti.common.item.pets.PetItems;
 
 import com.joostmsoftware.pfti.common.item.pets.PetItem;
+import com.joostmsoftware.pfti.core.api.pet.PetTypes;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
@@ -8,8 +9,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 public class CactusPetItem extends PetItem {
-    public CactusPetItem(int petTier, Settings settings) {
-        super(petTier, settings);
+    public CactusPetItem(int petTier, PetTypes type, Settings settings) {
+        super(petTier, type, settings);
     }
 
     @Override
@@ -19,7 +20,6 @@ public class CactusPetItem extends PetItem {
                 player.damage(DamageSource.CACTUS, 1);
             }
         }
-
         super.inventoryTick(stack, world, entity, slot, selected);
     }
 }

@@ -15,7 +15,6 @@ public class PftiModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
-//        blockStateModelGenerator.registerStateWithModelReference(PftiBlocks.PET_SUMMONING_ALTAR, Blocks.LECTERN);
     }
 
 
