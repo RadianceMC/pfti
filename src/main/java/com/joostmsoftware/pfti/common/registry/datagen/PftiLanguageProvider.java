@@ -22,6 +22,12 @@ public class PftiLanguageProvider extends FabricLanguageProvider {
             translationBuilder.add(item, name);
         });
 
+        PftiItems.ITEMS.forEach((s, item) -> {
+            String capitalised = capitalizeString(s);
+            String name = capitalised.replaceAll("_[0123456789]", "").replaceAll("_", " ");
+            translationBuilder.add(item, name);
+        });
+
         translationBuilder.add(Pfti.GROUP, "Pets From The Inventory");
 
         try {

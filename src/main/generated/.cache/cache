@@ -2,6 +2,7 @@
 fea66196a59a1bfe7569dc3b4bc88c8dcc5220aa data/c/tags/items/pets/mining_pets.json
 5a6ffe6853a813bd2d0758b4f4ebdc5a4b19a242 assets/pfti/models/item/mining_pet_3.json
 c84eb465965cf91a7c6ea4a40cda81babe484895 assets/pfti/models/item/cactus_pet.json
+728b8d76575e599c5401be1d717b655c0f0ddcb4 assets/pfti/models/item/pet_soul.json
 5fb6804bc66fc42d3d9f56a519b67255d18c681d assets/pfti/models/item/tater_pet.json
 a3dbc9c7ead80e1bea9037e97e069363a7701aa4 assets/pfti/models/item/iron_golem_5.json
 88238f21c2f2e9cd305f7a441b83fa85e9d703fe assets/pfti/models/item/mining_pet_2.json
@@ -17,7 +18,7 @@ afc849ff1da08db4dfaba2b6e316e57dd4e3f03f assets/pfti/models/item/mining_pet_4.js
 a99b820852157eae1a8c420ee42783d926972b4b assets/pfti/models/item/squid_pet.json
 b9570ebcc8b6e766f7b42a050001dda9b3db6ffe assets/pfti/models/item/sugar_cane_pet_3.json
 094564064343b206999402c82422b83c0d89dfa3 assets/pfti/models/item/cat_pet.json
-74852d66c5c00deb0894bc9d3225e644936dd47b assets/pfti/lang/en_us.json
+0c073876013589f8341e68acef527c2dee85fa7d assets/pfti/lang/en_us.json
 5c5005338b3b20745a669513365989604604b8dc data/c/tags/items/pets/iron_golem_pets.json
 f8c739d6dfd8ced75c0b80fbc014456ed7b338c4 assets/pfti/models/item/iron_golem_2.json
 9cacf313081d9a7f551df73486b0d024fe853b99 assets/pfti/models/item/iron_golem.json

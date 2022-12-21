@@ -24,5 +24,10 @@ public class PftiModelProvider extends FabricModelProvider {
             Item tempItem = PftiItems.PETS.get(s);
             itemModelGenerator.register(tempItem, Models.GENERATED);
         });
+
+        PftiItems.ITEMS.forEach((s, item) -> {
+            Item tempItem = PftiItems.ITEMS.get(s);
+            itemModelGenerator.register(tempItem, Models.GENERATED);
+        });
     }
 }
