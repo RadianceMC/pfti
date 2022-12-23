@@ -38,8 +38,8 @@ repositories {
 }
 
 dependencies {
-    implementation project(path: ":pets_from_the_inventory-core", configuration: "namedElements")
-    include project(":pets_from_the_inventory-core")
+    implementation project(path: ":pfti-core", configuration: "namedElements")
+    include project(":pfti-core")
 
     modImplementation libs.jxlib
 

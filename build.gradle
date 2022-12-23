@@ -83,8 +83,8 @@ subprojects {
 }
 
 dependencies {
-    implementation project(path: ":pets_from_the_inventory-core", configuration: "namedElements")
-    implementation project(path: ":pets_from_the_inventory-fabric", configuration: "namedElements")
+    implementation project(path: ":pfti-core", configuration: "namedElements")
+    implementation project(path: ":pfti-fabric", configuration: "namedElements")
 }
 
 loom {
