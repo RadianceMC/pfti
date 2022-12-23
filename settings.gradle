@@ -15,3 +15,6 @@ dependencyResolutionManagement {
         }
     }
 }
+
+include 'pets_from_the_inventory-core'
+include 'pets_from_the_inventory-fabric'

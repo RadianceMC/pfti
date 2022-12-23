@@ -1,0 +1,61 @@
+repositories {
+    // Add repositories to retrieve artifacts from in here.
+    // You should only use this when depending on other mods because
+    // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
+    // See https://docs.gradle.org/current/userguide/declaring_repositories.html
+    // for more information about repositories.
+
+    maven {
+        url "https://cursemaven.com"
+    }
+
+    maven {
+        name 'TerraformersMC'
+        url 'https://maven.terraformersmc.com'
+    }
+
+    maven {
+        name 'Repsy.io'
+        url 'https://repsy.io/mvn/joostmsoftware/joostmsoftware'
+    }
+
+    maven {
+        name 'Repsy.io'
+        url 'https://repsy.io/mvn/joostmsoftware/radiancemc'
+    }
+
+    maven {
+        name = "Nova Committee - Release"
+        url = "https://maven.nova-committee.cn/releases/"
+    }
+    maven {
+        name = "Nova Committee - Snapshot"
+        url = "https://maven.nova-committee.cn/snapshots/"
+    }
+
+    maven { url "https://maven.quiltmc.org/repository/release" }
+    maven { url "https://maven.terraformersmc.com/releases/" }
+}
+
+dependencies {
+    implementation project(path: ":pets_from_the_inventory-core", configuration: "namedElements")
+    include project(":pets_from_the_inventory-core")
+
+    modImplementation libs.jxlib
+
+    modApi libs.modmenu
+
+    modImplementation libs.radiancelib
+
+    // Emi + Emi Loot
+    modImplementation libs.emi
+    modImplementation libs.emi.loot
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/pfti.accesswidener")
+}
+
+processResources {
+    from rootProject.sourceSets.main.resources
+}
