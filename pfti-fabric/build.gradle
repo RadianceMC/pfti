@@ -14,25 +14,6 @@ repositories {
         url 'https://maven.terraformersmc.com'
     }
 
-    maven {
-        name 'Repsy.io'
-        url 'https://repsy.io/mvn/joostmsoftware/joostmsoftware'
-    }
-
-    maven {
-        name 'Repsy.io'
-        url 'https://repsy.io/mvn/joostmsoftware/radiancemc'
-    }
-
-    maven {
-        name = "Nova Committee - Release"
-        url = "https://maven.nova-committee.cn/releases/"
-    }
-    maven {
-        name = "Nova Committee - Snapshot"
-        url = "https://maven.nova-committee.cn/snapshots/"
-    }
-
     maven { url "https://maven.quiltmc.org/repository/release" }
     maven { url "https://maven.terraformersmc.com/releases/" }
 }
@@ -41,11 +22,7 @@ dependencies {
     implementation project(path: ":pfti-core", configuration: "namedElements")
     include project(":pfti-core")
 
-    modImplementation libs.jxlib
-
     modApi libs.modmenu
-
-    modImplementation libs.radiancelib
 
     // Emi + Emi Loot
     modImplementation libs.emi

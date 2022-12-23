@@ -15,7 +15,7 @@ public class PftiItemTagProvider extends FabricTagProvider<Item> {
     @Override
     protected void generateTags() {
         getOrCreateTagBuilder(TagRegistry.PETS)
-                .add(PftiItems.BEE_PET)
+                .addTag(TagRegistry.BEE_PET)
                 .addTag(TagRegistry.CACTUS_PET)
                 .addTag(TagRegistry.CAT_PET)
                 .addTag(TagRegistry.DOLPHIN_PET)
@@ -49,5 +49,6 @@ public class PftiItemTagProvider extends FabricTagProvider<Item> {
         getOrCreateTagBuilder(TagRegistry.CACTUS_PET).add(PftiItems.CACTUS_PET);
         getOrCreateTagBuilder(TagRegistry.TATER_PET).add(PftiItems.TATER_PET);
         getOrCreateTagBuilder(TagRegistry.DOLPHIN_PET).add(PftiItems.DOLPHIN_PET);
+        getOrCreateTagBuilder(TagRegistry.BEE_PET).add(PftiItems.BEE_PET);
     }
 }

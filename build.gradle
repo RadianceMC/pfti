@@ -21,6 +21,19 @@ allprojects {
         // See https://docs.gradle.org/current/userguide/declaring_repositories.html
         // for more information about repositories.
         maven { url "https://maven.quiltmc.org/repository/release" }
+        maven {
+            name "Nova Committee - Release"
+            url "https://maven.nova-committee.cn/releases/"
+        }
+        maven {
+            name "Nova Committee - Snapshot"
+            url "https://maven.nova-committee.cn/snapshots/"
+        }
+
+        maven {
+            name 'Repsy.io'
+            url 'https://repsy.io/mvn/joostmsoftware/radiancemc'
+        }
     }
 
     dependencies {
@@ -33,6 +46,10 @@ allprojects {
 
         // Mod dependencies
         modImplementation libs.fabric.api
+
+        modImplementation libs.radiancelib
+
+        implementation include("io.github.prismwork:prismconfig:0.2.0:all")
     }
 
     processResources {

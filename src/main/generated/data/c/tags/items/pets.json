@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "pfti:bee_pet",
+    "#c:pets/bee_pet",
     "#c:pets/cactus_pet",
     "#c:pets/cat_pet",
     "#c:pets/dolphin_pet",
