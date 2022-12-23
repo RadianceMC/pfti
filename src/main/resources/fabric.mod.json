@@ -22,9 +22,6 @@
     ],
     "fabric-datagen": [
       "com.joostmsoftware.pfti.common.registry.datagen.PftiDatagenEntrypoint"
-    ],
-    "modmenu": [
-      "com.joostmsoftware.pfti.core.compat.modmenu.ModMenuCompatPfti"
     ]
   },
   "mixins": [

@@ -1,5 +1,6 @@
 package com.joostmsoftware.pfti.common.item.pets;
 
+import com.joostmsoftware.pfti.Pfti;
 import com.joostmsoftware.pfti.config.PftiConfig;
 import com.joostmsoftware.pfti.core.api.pet.PetTypes;
 import net.minecraft.client.gui.screen.Screen;
@@ -24,7 +25,7 @@ public class StatusEffectPetItem extends PetItem {
     public StatusEffectPetItem(int petTier, PetTypes type, Settings settings) {
         super(petTier, type, settings);
         statusEffect = type.getStatusEffect();
-        effectDuration = PftiConfig.effectDuration;
+        effectDuration = Pfti.config.effectDuration;
     }
 
 

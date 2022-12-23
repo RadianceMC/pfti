@@ -4,6 +4,7 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 
 public enum PetTypes implements BasePet {
+    BEE(1, 1, null),
     CACTUS(1, 1, null),
     CAT(1, 1, StatusEffects.NIGHT_VISION),
     DOLPHIN(1, 1, StatusEffects.DOLPHINS_GRACE),

@@ -40,6 +40,10 @@ public class PftiLanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(TagRegistry.MINING_PETS, "Mining Pets");
         translationBuilder.add(TagRegistry.IRON_GOLEM_PETS, "Iron Golem Pets");
         translationBuilder.add(TagRegistry.SUGAR_CANE_PETS, "Sugar Cane Pets");
+        translationBuilder.add(TagRegistry.CAT_PET, "Cat Pets");
+        translationBuilder.add(TagRegistry.CACTUS_PET, "Cactus Pets");
+        translationBuilder.add(TagRegistry.DOLPHIN_PET, "Dolphin Pets");
+        translationBuilder.add(TagRegistry.TATER_PET, "Tater Pets");
     }
 
     // https://stackoverflow.com/questions/1892765/how-to-capitalize-the-first-character-of-each-word-in-a-string

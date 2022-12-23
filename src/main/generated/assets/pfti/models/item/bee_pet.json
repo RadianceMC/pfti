@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "pfti:item/squid_pet"
+    "layer0": "pfti:item/bee_pet"
   }
 }

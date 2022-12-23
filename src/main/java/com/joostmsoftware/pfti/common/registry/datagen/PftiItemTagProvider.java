@@ -15,14 +15,14 @@ public class PftiItemTagProvider extends FabricTagProvider<Item> {
     @Override
     protected void generateTags() {
         getOrCreateTagBuilder(TagRegistry.PETS)
-                .add(PftiItems.DOLPHIN_PET)
-                .add(PftiItems.CAT_PET)
-                .add(PftiItems.CACTUS_PET)
-                .add(PftiItems.SQUID_PET)
-                .add(PftiItems.TATER_PET)
+                .add(PftiItems.BEE_PET)
+                .addTag(TagRegistry.CACTUS_PET)
+                .addTag(TagRegistry.CAT_PET)
+                .addTag(TagRegistry.DOLPHIN_PET)
                 .addTag(TagRegistry.IRON_GOLEM_PETS)
                 .addTag(TagRegistry.MINING_PETS)
-                .addTag(TagRegistry.SUGAR_CANE_PETS);
+                .addTag(TagRegistry.SUGAR_CANE_PETS)
+                .addTag(TagRegistry.TATER_PET);
 
         getOrCreateTagBuilder(TagRegistry.MINING_PETS)
                 .add(PftiItems.MINING_PET1)
@@ -44,5 +44,10 @@ public class PftiItemTagProvider extends FabricTagProvider<Item> {
                 .add(PftiItems.SUGAR_CANE_PET3)
                 .add(PftiItems.SUGAR_CANE_PET4)
                 .add(PftiItems.SUGAR_CANE_PET5);
+
+        getOrCreateTagBuilder(TagRegistry.CAT_PET).add(PftiItems.CAT_PET);
+        getOrCreateTagBuilder(TagRegistry.CACTUS_PET).add(PftiItems.CACTUS_PET);
+        getOrCreateTagBuilder(TagRegistry.TATER_PET).add(PftiItems.TATER_PET);
+        getOrCreateTagBuilder(TagRegistry.DOLPHIN_PET).add(PftiItems.DOLPHIN_PET);
     }
 }

@@ -14,6 +14,7 @@ jxlib="0.1.6.5+1.18.2"
 cloth_config = "6.4.90"
 emi = "0.5.0+1.18.2"
 emi_loot="4159529" # check https://www.curseforge.com/minecraft/mc-mods/emi-loot/files/
+radiancelib = "0.1.1.1-SNAPSHOT"
 
 [libraries]
 minecraft = { module = "com.minecraft:minecraft", version.ref = "minecraft" }
@@ -28,6 +29,7 @@ jxlib = { module = "com.joostmsoftware:JXLib", version.ref = "jxlib" }
 cloth_config = { module = "me.shedaniel.cloth:cloth-config-fabric", version.ref = "cloth_config"}
 emi = { module = "dev.emi:emi", version.ref = "emi" }
 emi_loot = { module = "curse.maven:emi-loot-681783", version.ref = "emi_loot" }
+radiancelib = { module = "com.radiancemc:radiancelib", version.ref = "radiancelib" }
 
 [plugins]
 fabric_loom = { id = "fabric-loom", version.ref = "fabric_loom" }

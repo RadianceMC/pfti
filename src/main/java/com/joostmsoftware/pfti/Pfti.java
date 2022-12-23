@@ -2,16 +2,20 @@ package com.joostmsoftware.pfti;
 
 import com.joostmsoftware.pfti.common.registry.*;
 import com.joostmsoftware.pfti.config.PftiConfig;
+import com.radiancemc.radiancelib.api.config.BasePrismConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.File;
 
 public class Pfti implements ModInitializer {
 
@@ -31,11 +35,12 @@ public class Pfti implements ModInitializer {
 
     public static final ItemGroup GROUP = FabricItemGroupBuilder.build(ID("group"), ()-> new ItemStack(Items.SPAWNER));
 
-
+    public static PftiConfig.Config config;
+    private static final File config_file = FabricLoader.getInstance().getConfigDir().resolve("pfti.json5").toFile();
 
     @Override
     public void onInitialize() {
-        AutoConfig.register(PftiConfig.class, JanksonConfigSerializer::new);
+        config = PftiConfig.load(config_file);
 
         ItemRegistry.registerItems();
 

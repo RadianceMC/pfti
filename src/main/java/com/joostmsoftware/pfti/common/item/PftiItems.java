@@ -31,7 +31,7 @@ public class PftiItems {
 
     public static final PetItem TATER_PET = new TaterPetItem(1, PetTypes.TATER, new Item.Settings().group(Pfti.GROUP).maxCount(1));
     public static final PetItem CACTUS_PET = new CactusPetItem(1, PetTypes.CACTUS, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final PetItem SQUID_PET = new SquidPetItem(1, PetTypes.SQUID, new Item.Settings().group(Pfti.GROUP).maxCount(1));
+    public static final PetItem BEE_PET = new BeePetItem(1, PetTypes.BEE, new Item.Settings().group(Pfti.GROUP).maxCount(1));
 
 
     public static final Item PET_SOUL = new Item(new Item.Settings().group(Pfti.GROUP));
@@ -57,6 +57,6 @@ public class PftiItems {
         PETS.put("tater_pet", TATER_PET);
         PETS.put("cactus_pet", CACTUS_PET);
         PETS.put("dolphin_pet", DOLPHIN_PET);
-        PETS.put("squid_pet", SQUID_PET);
+        PETS.put("bee_pet", BEE_PET);
     }
 }
