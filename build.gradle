@@ -48,6 +48,7 @@ allprojects {
         modImplementation libs.fabric.api
 
         modImplementation libs.radiancelib
+        include libs.radiancelib
 
         implementation include("io.github.prismwork:prismconfig:0.2.0:all")
     }
