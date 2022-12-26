@@ -11,6 +11,7 @@ public class LootTableRegistry {
 
     public static void loadModifiedLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
+            // Makes a random pick from all pets and their tiers.
             if (source.isBuiltin() && LootTables.DESERT_PYRAMID_CHEST.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1.0f))
@@ -24,6 +25,39 @@ public class LootTableRegistry {
                         .rolls(ConstantLootNumberProvider.create(1.0f))
                         .conditionally(RandomChanceLootCondition.builder(0.10f))
                         .with(TagEntry.m_qvbpbjtq(TagRegistry.MINING_PETS));
+                tableBuilder.pool(poolBuilder);
+            }
+
+            if (source.isBuiltin() && LootTables.BURIED_TREASURE_CHEST.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1.0f))
+                        .conditionally(RandomChanceLootCondition.builder(0.10f))
+                        .with(TagEntry.m_qvbpbjtq(TagRegistry.DOLPHIN_PET));
+                tableBuilder.pool(poolBuilder);
+            }
+
+            if (source.isBuiltin() &&
+                    LootTables.VILLAGE_ARMORER_CHEST.equals(id) ||
+                    LootTables.VILLAGE_BUTCHER_CHEST.equals(id) ||
+                    LootTables.VILLAGE_CARTOGRAPHER_CHEST.equals(id) ||
+                    LootTables.VILLAGE_DESERT_HOUSE_CHEST.equals(id) ||
+                    LootTables.VILLAGE_FISHER_CHEST.equals(id) ||
+                    LootTables.VILLAGE_FLETCHER_CHEST.equals(id) ||
+                    LootTables.VILLAGE_MASON_CHEST.equals(id) ||
+                    LootTables.VILLAGE_PLAINS_CHEST.equals(id) ||
+                    LootTables.VILLAGE_SAVANNA_HOUSE_CHEST.equals(id) ||
+                    LootTables.VILLAGE_SHEPARD_CHEST.equals(id) ||
+                    LootTables.VILLAGE_SNOWY_HOUSE_CHEST.equals(id) ||
+                    LootTables.VILLAGE_TAIGA_HOUSE_CHEST.equals(id) ||
+                    LootTables.VILLAGE_TOOLSMITH_CHEST.equals(id) ||
+                    LootTables.VILLAGE_TANNERY_CHEST.equals(id) ||
+                    LootTables.VILLAGE_TEMPLE_CHEST.equals(id) ||
+                    LootTables.VILLAGE_WEAPONSMITH_CHEST.equals(id)
+            ) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1.0f))
+                        .conditionally(RandomChanceLootCondition.builder(0.10f))
+                        .with(TagEntry.m_qvbpbjtq(TagRegistry.IRON_GOLEM_PETS));
                 tableBuilder.pool(poolBuilder);
             }
         });
