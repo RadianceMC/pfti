@@ -11,12 +11,11 @@ public class LootTableRegistry {
 
     public static void loadModifiedLootTables() {
         LootTableEvents.MODIFY.register((resourceManager, lootManager, id, tableBuilder, source) -> {
-            // Makes a random pick from all pets and their tiers.
             if (source.isBuiltin() && LootTables.DESERT_PYRAMID_CHEST.equals(id)) {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1.0f))
                         .conditionally(RandomChanceLootCondition.builder(0.10f))
-                        .with(TagEntry.m_qvbpbjtq(TagRegistry.PETS));
+                        .with(TagEntry.m_qvbpbjtq(TagRegistry.CACTUS_PET));
                 tableBuilder.pool(poolBuilder);
             }
 
@@ -58,6 +57,22 @@ public class LootTableRegistry {
                         .rolls(ConstantLootNumberProvider.create(1.0f))
                         .conditionally(RandomChanceLootCondition.builder(0.10f))
                         .with(TagEntry.m_qvbpbjtq(TagRegistry.IRON_GOLEM_PETS));
+                tableBuilder.pool(poolBuilder);
+            }
+
+            if (source.isBuiltin() && LootTables.JUNGLE_TEMPLE_CHEST.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1.0f))
+                        .conditionally(RandomChanceLootCondition.builder(0.10f))
+                        .with(TagEntry.m_qvbpbjtq(TagRegistry.CAT_PET));
+                tableBuilder.pool(poolBuilder);
+            }
+
+            if (source.isBuiltin() && LootTables.SHIPWRECK_TREASURE_CHEST.equals(id)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1.0f))
+                        .conditionally(RandomChanceLootCondition.builder(0.10f))
+                        .with(TagEntry.m_qvbpbjtq(TagRegistry.PETS));
                 tableBuilder.pool(poolBuilder);
             }
         });

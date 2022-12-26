@@ -27,4 +27,4 @@ It will eventually if the mod gets some traction. Currently, it's developed in F
 
 ## License
 
-Pets From The Inventory is licensed under the [LGPLv3](./LICENSE) license.
+Anything from Pets from the Inventory is licensed under the [MIT](./LICENSE) license. This includes Pfti-core and any other mod loader variants. Unless I specified otherwise!
