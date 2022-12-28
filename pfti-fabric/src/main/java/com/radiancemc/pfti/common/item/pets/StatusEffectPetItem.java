@@ -1,6 +1,7 @@
 package com.radiancemc.pfti.common.item.pets;
 
 import com.radiancemc.pfti.Pfti;
+import com.radiancemc.pfti.api.core.pet.PetItem;
 import com.radiancemc.pfti.api.core.pet.PetTypes;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;

@@ -1,9 +1,9 @@
 package com.radiancemc.pfti.common.item;
 
 import com.radiancemc.pfti.Pfti;
+import com.radiancemc.pfti.api.core.pet.PetItem;
 import com.radiancemc.pfti.api.core.pet.PetTypes;
 import com.radiancemc.pfti.common.item.pets.PetItems.*;
-import com.radiancemc.pfti.common.item.pets.PetItem;
 import com.radiancemc.pfti.common.item.pets.StatusEffectPetItem;
 import net.minecraft.item.Item;
 import java.util.HashMap;

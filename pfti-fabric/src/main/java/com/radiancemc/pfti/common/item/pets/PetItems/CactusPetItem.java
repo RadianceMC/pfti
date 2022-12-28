@@ -1,6 +1,6 @@
 package com.radiancemc.pfti.common.item.pets.PetItems;
 
-import com.radiancemc.pfti.common.item.pets.PetItem;
+import com.radiancemc.pfti.api.core.pet.PetItem;
 import com.radiancemc.pfti.api.core.pet.PetTypes;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;

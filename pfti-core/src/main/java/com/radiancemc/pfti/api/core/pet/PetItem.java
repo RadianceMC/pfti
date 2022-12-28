@@ -1,6 +1,5 @@
-package com.radiancemc.pfti.common.item.pets;
+package com.radiancemc.pfti.api.core.pet;
 
-import com.radiancemc.pfti.api.core.pet.PetTypes;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
@@ -15,7 +14,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class PetItem extends Item {
+public class PetItem extends Item implements PetUtil {
     public int minTier;
     public int maxTier;
     public int currentTier;
@@ -29,9 +28,10 @@ public class PetItem extends Item {
         types = type;
     }
 
+
+    @Override
     public boolean hasPetInInventory(@NotNull PlayerEntity player, int slot) {
-        ItemStack pet = player.getInventory().getStack(slot);
-        return !pet.isEmpty();
+        return PetUtil.super.hasPetInInventory(player, slot);
     }
 
     @Override
