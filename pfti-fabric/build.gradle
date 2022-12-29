@@ -1,0 +1,42 @@
+archivesBaseName = "pfti-fabric"
+repositories {
+    // Add repositories to retrieve artifacts from in here.
+    // You should only use this when depending on other mods because
+    // Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
+    // See https://docs.gradle.org/current/userguide/declaring_repositories.html
+    // for more information about repositories.
+
+    maven {
+        url "https://cursemaven.com"
+    }
+
+    maven {
+        name 'TerraformersMC'
+        url 'https://maven.terraformersmc.com'
+    }
+
+    maven { url "https://maven.quiltmc.org/repository/release" }
+    maven { url "https://maven.terraformersmc.com/releases/" }
+}
+
+dependencies {
+    implementation project(path: ":pfti-core", configuration: "namedElements")
+    include project(":pfti-core")
+
+    modCompileOnly libs.modmenu
+    modRuntimeOnly libs.modmenu
+
+    // Emi + Emi Loot
+    modCompileOnly libs.emi
+    modRuntimeOnly libs.emi
+    modCompileOnly libs.emi.loot
+    modRuntimeOnly libs.emi.loot
+}
+
+loom {
+    accessWidenerPath = file("src/main/resources/pfti.accesswidener")
+}
+
+processResources {
+    from rootProject.sourceSets.main.resources
+}

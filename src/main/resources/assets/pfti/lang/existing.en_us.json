@@ -1,8 +1,0 @@
-{
-  "taterpetitem.info": "This is the 'best' pet out there",
-  "tooltip.petitem.shift" : "Press <shift> to see the tooltips",
-  "tooltip.petitem.tier": "Current tier: %1$s",
-  "tooltip.petitem.tier_max": "Current tier: %1$s (max)",
-  "tooltip.petitem.enchantment": "Gives: %1$s",
-  "tooltip.sugarcanepetitem.info": "Gotta go fast!"
-}

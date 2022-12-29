@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "pfti-core",
+  "version": "${version}",
+  "name": "Pets from the Inventory Core",
+  "description": "The core module of Pfti",
+  "authors": [
+    "JoostMSoftware"
+  ],
+  "license": "LGPL-3.0",
+  "environment": "*",
+  "custom": {
+    "modmenu": {
+      "parent": "pfti",
+      "badges": [
+        "library"
+      ]
+    }
+  }
+}

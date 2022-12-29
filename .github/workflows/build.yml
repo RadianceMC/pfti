@@ -29,8 +29,10 @@ jobs:
       - name: make gradle wrapper executable
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
-      - name: build
-        run: ./gradlew build
+      - name: build pfti core
+        run: ./gradlew :pfti-core:build
+      - name: build pfti fabric
+        run: ./gradlew :pfti-fabric:build
       - name: capture build artifacts
         if: ${{ runner.os == 'Linux' && matrix.java == '17' }} # Only upload artifacts built from the latest java on one OS
         uses: actions/upload-artifact@v2

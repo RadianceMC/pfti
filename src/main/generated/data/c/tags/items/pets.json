@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "#c:pets/bee_pet",
+    "#c:pets/cactus_pet",
+    "#c:pets/cat_pet",
+    "#c:pets/dolphin_pet",
+    "#c:pets/iron_golem_pets",
+    "#c:pets/mining_pets",
+    "#c:pets/sugar_cane_pets",
+    "#c:pets/tater_pet"
+  ]
+}

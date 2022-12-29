@@ -7,3 +7,14 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        create("libs") {
+            version("quilt_mappings", "1.18.2+build.26")
+        }
+    }
+}
+
+include 'pfti-core'
+include 'pfti-fabric'

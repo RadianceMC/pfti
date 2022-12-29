@@ -25,6 +25,12 @@ It will have different mechanics, it will work differently than Inventory Pets, 
 
 It will eventually if the mod gets some traction. Currently, it's developed in Fabric as I've the most experience with this modloader, and it also has Quilt support somewhat due to how Quilt is currently built. But if the mod gets traction I will most likely make this a [multiloader](https://github.com/jaredlll08/MultiLoader-Template) project.
 
+## What versions will be supported?
+
+In the current development cycle Pets from the Inventory will be supporting 1.18.2 (LTS) and 1.19.3+ (newest). 
+Why? Because I myself am not a big fan of the changes in 1.19.x, so I will make Pfti support these versions as I know people will be asking for it. 
+Any other version that will be requested will be ignored or simply do it yourself. 
+
 ## License
 
-Pets From The Inventory is licensed under the [LGPLv3](./LICENSE) license.
+Anything from Pets from the Inventory is licensed under the [MIT](./LICENSE) license. This includes Pfti-core and any other mod loader variants. Unless I specified otherwise!
