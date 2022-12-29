@@ -12,7 +12,7 @@ fabric_api="0.67.0+1.18.2"
 modmenu="3.2.3" # check https://www.curseforge.com/minecraft/mc-mods/modmenu/files/all?filter-game-version=1738749986%3a73250
 jxlib="0.1.6.5+1.18.2"
 cloth_config = "6.4.90"
-emi = "0.5.0+1.18.2"
+emi = "0.5.3+1.18.2"
 emi_loot="4159529" # check https://www.curseforge.com/minecraft/mc-mods/emi-loot/files/
 radiancelib = "0.1.2-SNAPSHOT"
 

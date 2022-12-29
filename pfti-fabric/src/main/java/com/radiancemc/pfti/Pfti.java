@@ -1,5 +1,6 @@
 package com.radiancemc.pfti;
 
+import com.radiancemc.pfti.common.item.PftiItems;
 import com.radiancemc.pfti.common.registry.ItemRegistry;
 import com.radiancemc.pfti.common.registry.LootTableRegistry;
 import com.radiancemc.pfti.config.PftiConfig;
@@ -8,7 +9,6 @@ import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -32,7 +32,7 @@ public class Pfti implements ModInitializer {
         return new Identifier(MOD_ID, path);
     }
 
-    public static final ItemGroup GROUP = FabricItemGroupBuilder.build(ID("group"), ()-> new ItemStack(Items.SPAWNER));
+    public static final ItemGroup GROUP = FabricItemGroupBuilder.build(ID("group"), ()-> new ItemStack(PftiItems.TATER_PET));
 
     public static PftiConfig.Config config;
     private static final File config_file = FabricLoader.getInstance().getConfigDir().resolve("pfti.json5").toFile();
