@@ -10,7 +10,7 @@
   "contact": {
     "repo": "https://github.com/JoostMSoftware/pfti"
   },
-  "license": "LGPL-3.0",
+  "license": "MIT",
   "icon": "assets/pfti/icon.png",
   "environment": "*",
   "entrypoints": {

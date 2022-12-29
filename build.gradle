@@ -12,7 +12,7 @@ allprojects {
     apply plugin: 'maven-publish'
 
     sourceCompatibility = targetCompatibility = JavaVersion.VERSION_17
-    version = project.mod_version + "+1.19.3"
+    version = project.mod_version
 
     repositories {
         // Add repositories to retrieve artifacts from in here.

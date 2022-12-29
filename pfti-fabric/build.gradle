@@ -23,12 +23,10 @@ dependencies {
     implementation project(path: ":pfti-core", configuration: "namedElements")
     include project(":pfti-core")
 
-    modCompileOnly libs.modmenu
-    modRuntimeOnly libs.modmenu
+    modApi libs.modmenu
 
     // Emi + Emi Loot
-    modCompileOnly libs.emi
-    modRuntimeOnly libs.emi
+    modImplementation libs.emi
     modCompileOnly libs.emi.loot
     modRuntimeOnly libs.emi.loot
 }
