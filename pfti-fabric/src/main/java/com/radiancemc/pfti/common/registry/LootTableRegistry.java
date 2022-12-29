@@ -15,7 +15,7 @@ public class LootTableRegistry {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1.0f))
                         .conditionally(RandomChanceLootCondition.builder(0.10f))
-                        .with(TagEntry.m_qvbpbjtq(TagRegistry.CACTUS_PET));
+                        .with(TagEntry.builder(TagRegistry.CACTUS_PET));
                 tableBuilder.pool(poolBuilder);
             }
 
@@ -23,7 +23,7 @@ public class LootTableRegistry {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1.0f))
                         .conditionally(RandomChanceLootCondition.builder(0.10f))
-                        .with(TagEntry.m_qvbpbjtq(TagRegistry.MINING_PETS));
+                        .with(TagEntry.expandBuilder(TagRegistry.MINING_PETS));
                 tableBuilder.pool(poolBuilder);
             }
 
@@ -31,7 +31,7 @@ public class LootTableRegistry {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1.0f))
                         .conditionally(RandomChanceLootCondition.builder(0.10f))
-                        .with(TagEntry.m_qvbpbjtq(TagRegistry.DOLPHIN_PET));
+                        .with(TagEntry.expandBuilder(TagRegistry.DOLPHIN_PET));
                 tableBuilder.pool(poolBuilder);
             }
 
@@ -56,7 +56,7 @@ public class LootTableRegistry {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1.0f))
                         .conditionally(RandomChanceLootCondition.builder(0.10f))
-                        .with(TagEntry.m_qvbpbjtq(TagRegistry.IRON_GOLEM_PETS));
+                        .with(TagEntry.expandBuilder(TagRegistry.IRON_GOLEM_PETS));
                 tableBuilder.pool(poolBuilder);
             }
 
@@ -64,7 +64,7 @@ public class LootTableRegistry {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1.0f))
                         .conditionally(RandomChanceLootCondition.builder(0.10f))
-                        .with(TagEntry.m_qvbpbjtq(TagRegistry.CAT_PET));
+                        .with(TagEntry.expandBuilder(TagRegistry.CAT_PET));
                 tableBuilder.pool(poolBuilder);
             }
 
@@ -72,7 +72,7 @@ public class LootTableRegistry {
                 LootPool.Builder poolBuilder = LootPool.builder()
                         .rolls(ConstantLootNumberProvider.create(1.0f))
                         .conditionally(RandomChanceLootCondition.builder(0.10f))
-                        .with(TagEntry.m_qvbpbjtq(TagRegistry.PETS));
+                        .with(TagEntry.expandBuilder(TagRegistry.PETS));
                 tableBuilder.pool(poolBuilder);
             }
         });

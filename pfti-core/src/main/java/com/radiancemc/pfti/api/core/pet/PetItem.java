@@ -6,7 +6,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
@@ -39,13 +38,13 @@ public class PetItem extends Item implements PetUtil {
         if (Screen.hasShiftDown()) {
             for (int i = types.getMinTier(); i <= types.getMaxTier() + 1; i++) {
                 if (i == currentTier && i == maxTier) {
-                    tooltip.add(new TranslatableText("tooltip.petitem.tier_max", i).formatted(Formatting.AQUA));
+                    tooltip.add(Text.translatable("tooltip.petitem.tier_max", i).formatted(Formatting.AQUA));
                 } else if (i == currentTier) {
-                    tooltip.add(new TranslatableText("tooltip.petitem.tier", i).formatted(Formatting.AQUA));
+                    tooltip.add(Text.translatable("tooltip.petitem.tier", i).formatted(Formatting.AQUA));
                 }
             }
         } else {
-            tooltip.add(new TranslatableText("tooltip.petitem.shift").formatted(Formatting.GRAY));
+            tooltip.add(Text.translatable("tooltip.petitem.shift").formatted(Formatting.GRAY));
         }
         super.appendTooltip(stack, world, tooltip, context);
     }

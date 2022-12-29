@@ -1,10 +1,8 @@
 package com.radiancemc.pfti.common.item;
 
-import com.radiancemc.pfti.Pfti;
 import com.radiancemc.pfti.api.core.pet.PetItem;
 import com.radiancemc.pfti.api.core.pet.PetTypes;
-import com.radiancemc.pfti.common.item.pets.PetItems.*;
-import com.radiancemc.pfti.common.item.pets.StatusEffectPetItem;
+import com.radiancemc.pfti.common.item.pets.*;
 import net.minecraft.item.Item;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,30 +10,30 @@ import java.util.Map;
 public class PftiItems {
     public static final Map<String, PetItem> PETS = new HashMap<>();
     public static final Map<String, Item> ITEMS = new HashMap<>();
-    public static final StatusEffectPetItem MINING_PET1 = new MiningPetItem(1, PetTypes.MINING, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem MINING_PET2 = new MiningPetItem(2, PetTypes.MINING, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem MINING_PET3 = new MiningPetItem(3, PetTypes.MINING, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem MINING_PET4 = new MiningPetItem(4, PetTypes.MINING, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem MINING_PET5 = new MiningPetItem(5, PetTypes.MINING, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem SUGAR_CANE_PET1 = new SugarCanePetItem(1, PetTypes.SUGARCANE, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem SUGAR_CANE_PET2 = new SugarCanePetItem(2, PetTypes.SUGARCANE, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem SUGAR_CANE_PET3 = new SugarCanePetItem(3, PetTypes.SUGARCANE, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem SUGAR_CANE_PET4 = new SugarCanePetItem(4, PetTypes.SUGARCANE, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem SUGAR_CANE_PET5 = new SugarCanePetItem(5, PetTypes.SUGARCANE, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem IRON_GOLEM = new IronGolemPetItem(1, PetTypes.IRON_GOLEM, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem IRON_GOLEM2 = new IronGolemPetItem(2, PetTypes.IRON_GOLEM, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem IRON_GOLEM3 = new IronGolemPetItem(3, PetTypes.IRON_GOLEM , new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem IRON_GOLEM4 = new IronGolemPetItem(4, PetTypes.IRON_GOLEM, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem IRON_GOLEM5 = new IronGolemPetItem(5, PetTypes.IRON_GOLEM, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem CAT_PET = new CatPetItem( 1, PetTypes.CAT, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final StatusEffectPetItem DOLPHIN_PET = new DolphinPetItem(1, PetTypes.DOLPHIN, new Item.Settings().group(Pfti.GROUP).maxCount(1));
+    public static final StatusEffectPetItem MINING_PET1 = new MiningPetItem(1, PetTypes.MINING, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem MINING_PET2 = new MiningPetItem(2, PetTypes.MINING, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem MINING_PET3 = new MiningPetItem(3, PetTypes.MINING, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem MINING_PET4 = new MiningPetItem(4, PetTypes.MINING, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem MINING_PET5 = new MiningPetItem(5, PetTypes.MINING, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem SUGAR_CANE_PET1 = new SugarCanePetItem(1, PetTypes.SUGARCANE, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem SUGAR_CANE_PET2 = new SugarCanePetItem(2, PetTypes.SUGARCANE, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem SUGAR_CANE_PET3 = new SugarCanePetItem(3, PetTypes.SUGARCANE, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem SUGAR_CANE_PET4 = new SugarCanePetItem(4, PetTypes.SUGARCANE, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem SUGAR_CANE_PET5 = new SugarCanePetItem(5, PetTypes.SUGARCANE, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem IRON_GOLEM = new IronGolemPetItem(1, PetTypes.IRON_GOLEM, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem IRON_GOLEM2 = new IronGolemPetItem(2, PetTypes.IRON_GOLEM, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem IRON_GOLEM3 = new IronGolemPetItem(3, PetTypes.IRON_GOLEM , new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem IRON_GOLEM4 = new IronGolemPetItem(4, PetTypes.IRON_GOLEM, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem IRON_GOLEM5 = new IronGolemPetItem(5, PetTypes.IRON_GOLEM, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem CAT_PET = new CatPetItem( 1, PetTypes.CAT, new Item.Settings().maxCount(1));
+    public static final StatusEffectPetItem DOLPHIN_PET = new DolphinPetItem(1, PetTypes.DOLPHIN, new Item.Settings().maxCount(1));
 
-    public static final PetItem TATER_PET = new TaterPetItem(1, PetTypes.TATER, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final PetItem CACTUS_PET = new CactusPetItem(1, PetTypes.CACTUS, new Item.Settings().group(Pfti.GROUP).maxCount(1));
-    public static final PetItem BEE_PET = new BeePetItem(1, PetTypes.BEE, new Item.Settings().group(Pfti.GROUP).maxCount(1));
+    public static final PetItem TATER_PET = new TaterPetItem(1, PetTypes.TATER, new Item.Settings().maxCount(1));
+    public static final PetItem CACTUS_PET = new CactusPetItem(1, PetTypes.CACTUS, new Item.Settings().maxCount(1));
+    public static final PetItem BEE_PET = new BeePetItem(1, PetTypes.BEE, new Item.Settings().maxCount(1));
 
 
-    public static final Item PET_SOUL = new Item(new Item.Settings().group(Pfti.GROUP));
+    public static final Item PET_SOUL = new Item(new Item.Settings());
 
     static {
         ITEMS.put("pet_soul", PET_SOUL);

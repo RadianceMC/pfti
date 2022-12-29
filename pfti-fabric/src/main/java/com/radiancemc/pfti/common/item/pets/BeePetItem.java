@@ -1,4 +1,4 @@
-package com.radiancemc.pfti.common.item.pets.PetItems;
+package com.radiancemc.pfti.common.item.pets;
 
 import com.radiancemc.pfti.api.core.pet.PetItem;
 import com.radiancemc.pfti.api.core.pet.PetTypes;

@@ -2,18 +2,31 @@ package com.radiancemc.pfti.common.registry.datagen;
 
 import com.radiancemc.pfti.common.item.PftiItems;
 import com.radiancemc.pfti.common.registry.TagRegistry;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Item;
-import net.minecraft.util.registry.Registry;
+import net.minecraft.registry.HolderLookup;
+import net.minecraft.registry.RegistryKeys;
+
+import java.util.concurrent.CompletableFuture;
 
 public class PftiItemTagProvider extends FabricTagProvider<Item> {
-    protected PftiItemTagProvider(FabricDataGenerator dataGenerator) {
-        super(dataGenerator, Registry.ITEM, "Item Tag Provider");
+
+
+    /**
+     * Constructs a new {@link FabricTagProvider} with the default computed path.
+     *
+     * <p>Common implementations of this class are provided.
+     *
+     * @param output           the {@link FabricDataOutput} instance
+     * @param registriesFuture the backing registry for the tag type
+     */
+    public PftiItemTagProvider(FabricDataOutput output, CompletableFuture<HolderLookup.Provider> registriesFuture) {
+        super(output, RegistryKeys.ITEM, registriesFuture);
     }
 
     @Override
-    protected void generateTags() {
+    protected void configure(HolderLookup.Provider arg) {
         getOrCreateTagBuilder(TagRegistry.PETS)
                 .addTag(TagRegistry.BEE_PET)
                 .addTag(TagRegistry.CACTUS_PET)

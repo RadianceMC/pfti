@@ -11,7 +11,6 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
@@ -34,9 +33,9 @@ public class StatusEffectPetItem extends PetItem {
         if (Screen.hasShiftDown()) {
             for (int i = types.getMinTier(); i <= types.getMaxTier(); i++) {
                 if (i == currentTier && i == maxTier) {
-                    tooltip.add(new TranslatableText("tooltip.petitem.enchantment", statusEffect.getName()).formatted(Formatting.YELLOW));
+                    tooltip.add(Text.translatable("tooltip.petitem.enchantment", statusEffect.getName()).formatted(Formatting.YELLOW));
                 } else if (i == currentTier) {
-                    tooltip.add(new TranslatableText("tooltip.petitem.enchantment", statusEffect.getName()).formatted(Formatting.YELLOW));
+                    tooltip.add(Text.translatable("tooltip.petitem.enchantment", statusEffect.getName()).formatted(Formatting.YELLOW));
                 }
             }
         }

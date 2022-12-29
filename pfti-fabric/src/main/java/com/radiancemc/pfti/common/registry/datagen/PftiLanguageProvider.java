@@ -4,13 +4,14 @@ import com.radiancemc.pfti.Pfti;
 import com.radiancemc.pfti.common.item.PftiItems;
 import com.radiancemc.pfti.common.registry.TagRegistry;
 import com.radiancemc.radiancelib.api.data.RadianceLanguageProvider;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 
 import java.io.IOException;
 import java.nio.file.Path;
 
 public class PftiLanguageProvider extends RadianceLanguageProvider {
-    protected PftiLanguageProvider(FabricDataGenerator dataGenerator) {
+
+    protected PftiLanguageProvider(FabricDataOutput dataGenerator) {
         super(dataGenerator, "en_us");
     }
 
@@ -30,7 +31,7 @@ public class PftiLanguageProvider extends RadianceLanguageProvider {
 
         translationBuilder.add(Pfti.GROUP, "Pets From The Inventory");
         try {
-            Path existingFilePath = dataGenerator.getModContainer().findPath("assets/pfti/lang/existing.en_us.json").get();
+            Path existingFilePath = dataOutput.getModContainer().findPath("assets/pfti/lang/existing.en_us.json").get();
             translationBuilder.add(existingFilePath);
         } catch (IOException e) {
             throw new RuntimeException("Failed to add existing language file!", e);

@@ -2,7 +2,7 @@ package com.radiancemc.pfti.common.registry.datagen;
 
 import com.radiancemc.pfti.api.core.pet.PetItem;
 import com.radiancemc.pfti.common.item.PftiItems;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.model.BlockStateModelGenerator;
@@ -15,8 +15,10 @@ import java.util.List;
 import java.util.Map;
 
 public class PftiModelProvider extends FabricModelProvider {
-    public PftiModelProvider(FabricDataGenerator dataGenerator) {
-        super(dataGenerator);
+
+
+    public PftiModelProvider(FabricDataOutput output) {
+        super(output);
     }
 
     @Override
