@@ -55,6 +55,6 @@ public class PftiConfig {
 
     public static class Config {
         @Comment("the amount in ticks you wish to have the duration last")
-        public int effectDuration = 5;
+        public int effectDuration = 240;
     }
 }

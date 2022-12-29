@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class PftiItems {
-    public static final Map<String, Item> PETS = new HashMap<>();
+    public static final Map<String, PetItem> PETS = new HashMap<>();
     public static final Map<String, Item> ITEMS = new HashMap<>();
     public static final StatusEffectPetItem MINING_PET1 = new MiningPetItem(1, PetTypes.MINING, new Item.Settings().group(Pfti.GROUP).maxCount(1));
     public static final StatusEffectPetItem MINING_PET2 = new MiningPetItem(2, PetTypes.MINING, new Item.Settings().group(Pfti.GROUP).maxCount(1));
@@ -39,6 +39,7 @@ public class PftiItems {
 
     static {
         ITEMS.put("pet_soul", PET_SOUL);
+
         PETS.put("mining_pet", MINING_PET1);
         PETS.put("mining_pet_2", MINING_PET2);
         PETS.put("mining_pet_3", MINING_PET3);
