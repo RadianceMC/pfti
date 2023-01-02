@@ -3,7 +3,7 @@ package com.radiancemc.pfti.common.registry.datagen;
 import com.radiancemc.pfti.Pfti;
 import com.radiancemc.pfti.common.item.PftiItems;
 import com.radiancemc.pfti.common.registry.TagRegistry;
-import com.radiancemc.radiancelib.api.data.RadianceLanguageProvider;
+import com.radiancemc.radiancelib.api.datagen.provider.RadianceLanguageProvider;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 
 import java.io.IOException;

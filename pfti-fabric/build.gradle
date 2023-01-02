@@ -24,11 +24,11 @@ dependencies {
     include project(":pfti-core")
 
     modCompileOnly libs.modmenu
-    modCompileOnly libs.modmenu
+    modRuntimeOnly libs.modmenu
 
     // Emi + Emi Loot
     modCompileOnly libs.emi
-    modCompileOnly libs.emi
+    modRuntimeOnly libs.emi
     modRuntimeOnly libs.emi.loot
 }
 
