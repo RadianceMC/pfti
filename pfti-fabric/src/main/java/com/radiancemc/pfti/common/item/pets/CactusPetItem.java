@@ -1,15 +1,15 @@
-package com.radiancemc.pfti.common.item.pets.PetItems;
+package com.radiancemc.pfti.common.item.pets;
 
-import com.radiancemc.pfti.api.core.pet.PetItem;
-import com.radiancemc.pfti.api.core.pet.PetTypes;
+import com.radiancemc.pfti.api.core.pet.BasePetItem;
+import com.radiancemc.pfti.api.core.pet.types.PetTypes;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.damage.DamageSource;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class CactusPetItem extends PetItem {
-    public CactusPetItem(int petTier, PetTypes type, Settings settings) {
+public class CactusPetItem extends BasePetItem {
+    public CactusPetItem(int petTier, PetTypes.BasePetTypes type, Settings settings) {
         super(petTier, type, settings);
     }
 

@@ -2,7 +2,7 @@ package com.radiancemc.pfti.common.item.pets;
 
 import com.radiancemc.pfti.Pfti;
 import com.radiancemc.pfti.api.core.pet.PetItem;
-import com.radiancemc.pfti.api.core.pet.PetTypes;
+import com.radiancemc.pfti.api.core.pet.types.PetTypes;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.Entity;
@@ -21,10 +21,14 @@ import java.util.List;
 public class StatusEffectPetItem extends PetItem {
     public StatusEffect statusEffect;
     public static int effectDuration;
+    public PetTypes.StatusPetTypes statusPetTypes;
+    public int currentTier;
 
-    public StatusEffectPetItem(int petTier, PetTypes type, Settings settings) {
-        super(petTier, type, settings);
-        statusEffect = type.getStatusEffect();
+    public StatusEffectPetItem(int petTier, PetTypes.StatusPetTypes statusPetTypes, Settings settings) {
+        super(statusPetTypes.getCoreType(), settings);
+        this.statusPetTypes = statusPetTypes;
+        this.currentTier = petTier;
+        statusEffect = statusPetTypes.getStatusEffect();
         effectDuration = Pfti.config.effectDuration;
     }
 
@@ -32,13 +36,17 @@ public class StatusEffectPetItem extends PetItem {
     @Override
     public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
         if (Screen.hasShiftDown()) {
-            for (int i = types.getMinTier(); i <= types.getMaxTier(); i++) {
+            for (int i = statusPetTypes.getMinTier(); i <= statusPetTypes.getMaxTier(); i++) {
                 if (i == currentTier && i == maxTier) {
+                    tooltip.add(new TranslatableText("tooltip.petitem.tier_max", i).formatted(Formatting.AQUA));
                     tooltip.add(new TranslatableText("tooltip.petitem.enchantment", statusEffect.getName()).formatted(Formatting.YELLOW));
                 } else if (i == currentTier) {
+                    tooltip.add(new TranslatableText("tooltip.petitem.tier", i).formatted(Formatting.AQUA));
                     tooltip.add(new TranslatableText("tooltip.petitem.enchantment", statusEffect.getName()).formatted(Formatting.YELLOW));
                 }
             }
+        } else {
+            tooltip.add(new TranslatableText("tooltip.petitem.shift").formatted(Formatting.GRAY));
         }
         super.appendTooltip(stack, world, tooltip, context);
     }
@@ -48,29 +56,19 @@ public class StatusEffectPetItem extends PetItem {
         if (!world.isClient) {
             if (entity instanceof PlayerEntity player) {
                 if (hasPetInInventory(player, slot)) {
-                    if (currentTier == 1) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 0, true, false, true));
-                    } else if (currentTier == 2) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 1, true, false, true));
-                    } else if (currentTier == 3) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 2, true, false, true));
-                    } else if (currentTier == 4) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 3, true, false, true));
-                    } else if (currentTier == 5){
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 4, true, false, true));
+                    for (int i = 1; i <= 5; i++) {
+                        if (currentTier == i) {
+                            player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, i-1, true, false, true));
+                            break; // exit loop once the corresponding tier is found
+                        }
                     }
                 }
-                if (player.getOffHandStack() == stack) {
-                    if (currentTier == 1) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 0, true, false, true));
-                    } else if (currentTier == 2) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 1, true, false, true));
-                    } else if (currentTier == 3) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 2, true, false, true));
-                    } else if (currentTier == 4) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 3, true, false, true));
-                    } else if (currentTier == 5){
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 4, true, false, true));
+                if (hasPetInOffhand(player)) {
+                    for (int i = 1; i <= 5; i++) {
+                        if (currentTier == i) {
+                            player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, i-1, true, false, true));
+                            break; // exit loop once the corresponding tier is found
+                        }
                     }
                 }
             }
