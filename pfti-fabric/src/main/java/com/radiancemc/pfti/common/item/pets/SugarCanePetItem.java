@@ -1,6 +1,6 @@
 package com.radiancemc.pfti.common.item.pets;
 
-import com.radiancemc.pfti.api.core.pet.PetTypes;
+import com.radiancemc.pfti.api.core.pet.types.PetTypes;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
@@ -13,7 +13,7 @@ import java.util.List;
 public class SugarCanePetItem extends StatusEffectPetItem {
 
 
-    public SugarCanePetItem(int petTier, PetTypes type, Settings settings) {
+    public SugarCanePetItem(int petTier, PetTypes.StatusPetTypes type, Settings settings) {
         super(petTier, type, settings);
     }
 

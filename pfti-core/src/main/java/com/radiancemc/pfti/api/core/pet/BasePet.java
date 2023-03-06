@@ -1,6 +1,6 @@
 package com.radiancemc.pfti.api.core.pet;
 
-import net.minecraft.entity.effect.StatusEffect;
+import com.radiancemc.pfti.api.core.pet.types.PetTypes;
 
 public interface BasePet {
     /**
@@ -17,8 +17,8 @@ public interface BasePet {
     int getMaxTier();
 
     /**
-     * Gets the status effect of a pet.
-     * @return the effect that the pet has if any.
+     * Gets the coretype of a pet. <br />
+     * @return The coretype of a pet. Useful for making sure it has the right type.
      */
-    StatusEffect getStatusEffect();
+    PetTypes.CoreTypes getCoreType();
 }

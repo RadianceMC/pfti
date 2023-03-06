@@ -1,7 +1,7 @@
 package com.radiancemc.pfti.common.item.pets;
 
-import com.radiancemc.pfti.api.core.pet.PetItem;
-import com.radiancemc.pfti.api.core.pet.PetTypes;
+import com.radiancemc.pfti.api.core.pet.BasePetItem;
+import com.radiancemc.pfti.api.core.pet.types.PetTypes;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -13,10 +13,8 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class TaterPetItem extends PetItem {
-
-
-    public TaterPetItem(int petTier, PetTypes type, Item.Settings settings) {
+public class TaterPetItem extends BasePetItem {
+    public TaterPetItem(int petTier, PetTypes.BasePetTypes type, Item.Settings settings) {
         super(petTier, type, settings);
     }
 
