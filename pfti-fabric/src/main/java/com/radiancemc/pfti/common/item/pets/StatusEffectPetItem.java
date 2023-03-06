@@ -48,29 +48,19 @@ public class StatusEffectPetItem extends PetItem {
         if (!world.isClient) {
             if (entity instanceof PlayerEntity player) {
                 if (hasPetInInventory(player, slot)) {
-                    if (currentTier == 1) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 0, true, false, true));
-                    } else if (currentTier == 2) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 1, true, false, true));
-                    } else if (currentTier == 3) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 2, true, false, true));
-                    } else if (currentTier == 4) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 3, true, false, true));
-                    } else if (currentTier == 5){
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 4, true, false, true));
+                    for (int i = 1; i <= 5; i++) {
+                        if (currentTier == i) {
+                            player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, i-1, true, false, true));
+                            break; // exit loop once the corresponding tier is found
+                        }
                     }
                 }
-                if (player.getOffHandStack() == stack) {
-                    if (currentTier == 1) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 0, true, false, true));
-                    } else if (currentTier == 2) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 1, true, false, true));
-                    } else if (currentTier == 3) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 2, true, false, true));
-                    } else if (currentTier == 4) {
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 3, true, false, true));
-                    } else if (currentTier == 5){
-                        player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, 4, true, false, true));
+                if (hasPetInOffhand(player)) {
+                    for (int i = 1; i <= 5; i++) {
+                        if (currentTier == i) {
+                            player.addStatusEffect(new StatusEffectInstance(statusEffect, effectDuration, i-1, true, false, true));
+                            break; // exit loop once the corresponding tier is found
+                        }
                     }
                 }
             }

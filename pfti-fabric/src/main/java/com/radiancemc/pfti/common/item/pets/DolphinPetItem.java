@@ -1,6 +1,5 @@
-package com.radiancemc.pfti.common.item.pets.PetItems;
+package com.radiancemc.pfti.common.item.pets;
 
-import com.radiancemc.pfti.common.item.pets.StatusEffectPetItem;
 import com.radiancemc.pfti.api.core.pet.PetTypes;
 
 public class DolphinPetItem extends StatusEffectPetItem {

@@ -19,4 +19,12 @@ public interface PetUtil {
         }
         return pet.isEmpty();
     }
+
+    default boolean hasPetInOffhand(PlayerEntity player) {
+        ItemStack pet = player.getOffHandStack();
+        if (pet.getItem() instanceof PetItem) {
+            return !pet.isEmpty();
+        }
+        return pet.isEmpty();
+    }
 }

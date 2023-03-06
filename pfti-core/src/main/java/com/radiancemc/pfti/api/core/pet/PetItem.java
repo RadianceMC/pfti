@@ -28,10 +28,14 @@ public class PetItem extends Item implements PetUtil {
         types = type;
     }
 
-
     @Override
     public boolean hasPetInInventory(@NotNull PlayerEntity player, int slot) {
         return PetUtil.super.hasPetInInventory(player, slot);
+    }
+
+    @Override
+    public boolean hasPetInOffhand(PlayerEntity player) {
+        return PetUtil.super.hasPetInOffhand(player);
     }
 
     @Override
