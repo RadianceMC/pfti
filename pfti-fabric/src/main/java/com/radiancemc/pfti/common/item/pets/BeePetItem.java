@@ -1,16 +1,16 @@
-package com.radiancemc.pfti.common.item.pets.PetItems;
+package com.radiancemc.pfti.common.item.pets;
 
-import com.radiancemc.pfti.api.core.pet.PetItem;
-import com.radiancemc.pfti.api.core.pet.PetTypes;
+import com.radiancemc.pfti.api.core.pet.BasePetItem;
+import com.radiancemc.pfti.api.core.pet.types.PetTypes;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.NotNull;
 
-public class BeePetItem extends PetItem {
+public class BeePetItem extends BasePetItem {
 
 
-    public BeePetItem(int petTier, @NotNull PetTypes type, Settings settings) {
+    public BeePetItem(int petTier, @NotNull PetTypes.BasePetTypes type, Settings settings) {
         super(petTier, type, settings);
     }
 
