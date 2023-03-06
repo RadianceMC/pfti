@@ -5,6 +5,9 @@ import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffects;
 
 public class PetTypes {
+    /**
+     * Holds all the core type together and makes it easier to manage what kind of type it is.
+     */
     @SuppressWarnings("unused")
     public enum CoreTypes {
         BASE("base", 1),
@@ -28,6 +31,9 @@ public class PetTypes {
         }
     }
 
+    /**
+     * Holds all the data for base pets.
+     */
     public enum BasePetTypes implements BasePet {
         BEE("bee", CoreTypes.BASE, 1, 1),
         CACTUS("cactus", CoreTypes.BASE, 1, 1),
@@ -82,7 +88,6 @@ public class PetTypes {
         private final int maxTier;
         private final StatusEffect effect;
         private final CoreTypes coreTypes;
-
 
         StatusPetTypes(CoreTypes coreTypes, int minTier, int maxTier, StatusEffect effect) {
             this.coreTypes = coreTypes;
